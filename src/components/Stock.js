@@ -1,15 +1,15 @@
 import React from "react";
 
-function Stock() {
+function Stock({name,price,onClick}) {
   return (
     <div>
       <div className="card">
-        <div className="card-body">
-          <h5 className="card-title">{"Compant Name"}</h5>
-          <p className="card-text">{"Stock Price"}</p>
+        <div className="card-body" onClick={onClick}>
+          <h5 className="card-title" value={name}>{name}</h5>
+          <p className="card-text" value={price}>{price}</p>
         </div>
       </div>
     </div>
-  );
+  )
 }
 export default Stock;
